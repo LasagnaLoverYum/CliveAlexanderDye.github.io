@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Clive & The Chaos Crew</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -15,13 +17,31 @@
 }
 
 body{
-    background:
-    radial-gradient(circle at top left,#1e3a8a,#0f172a 40%),
-    radial-gradient(circle at bottom right,#7c3aed,#111827 50%);
-    min-height:100vh;
-    color:white;
     font-family:'Poppins',sans-serif;
+    background:
+    radial-gradient(circle at top left,#172554,#0f172a 35%),
+    radial-gradient(circle at bottom right,#581c87,#111827 60%);
+    color:white;
     overflow-x:hidden;
+    min-height:100vh;
+}
+
+.glow{
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#3b82f655;
+    filter:blur(120px);
+    top:-100px;
+    right:-100px;
+    z-index:-1;
+}
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    padding-bottom:60px;
 }
 
 .hero{
@@ -30,34 +50,39 @@ body{
 }
 
 .hero h1{
-    font-size:4rem;
     font-family:'Cinzel',serif;
+    font-size:4.5rem;
     color:#facc15;
-    text-shadow:0 0 20px rgba(250,204,21,0.5);
+    text-shadow:0 0 25px rgba(250,204,21,0.4);
 }
 
 .hero p{
     margin-top:20px;
-    font-size:1.2rem;
     color:#d1d5db;
+    font-size:1.2rem;
 }
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-.story{
+.story-box{
     margin-top:40px;
     background:rgba(255,255,255,0.08);
     border:1px solid rgba(255,255,255,0.1);
-    backdrop-filter:blur(12px);
-    padding:40px;
-    border-radius:25px;
-    line-height:2;
-    font-size:1.1rem;
+    border-radius:30px;
+    padding:50px;
+    backdrop-filter:blur(15px);
     box-shadow:0 10px 40px rgba(0,0,0,0.4);
+}
+
+.story-box h2{
+    font-family:'Cinzel',serif;
+    color:#60a5fa;
+    margin-bottom:25px;
+    font-size:2.5rem;
+}
+
+.story{
+    line-height:2;
+    font-size:1.15rem;
+    color:#f1f5f9;
 }
 
 .highlight{
@@ -70,185 +95,293 @@ body{
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
     margin-top:50px;
-    margin-bottom:60px;
 }
 
 .card{
     background:rgba(255,255,255,0.08);
-    border-radius:20px;
-    padding:25px;
-    transition:0.3s;
     border:1px solid rgba(255,255,255,0.08);
+    border-radius:24px;
+    padding:25px;
+    transition:0.35s;
 }
 
 .card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 25px rgba(250,204,21,0.3);
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 0 30px rgba(96,165,250,0.4);
 }
 
-.card h2{
-    color:#60a5fa;
+.card h3{
+    color:#facc15;
     margin-bottom:15px;
     font-family:'Cinzel',serif;
+    font-size:1.8rem;
 }
 
 .footer{
     text-align:center;
-    padding:30px;
+    margin-top:60px;
     color:#9ca3af;
+    padding-bottom:30px;
 }
 
 .party{
-    animation:bounce 2s infinite;
+    animation:float 3s ease-in-out infinite;
 }
 
-@keyframes bounce{
-    0%,100%{
-        transform:translateY(0);
+@keyframes float{
+    0%{
+        transform:translateY(0px);
     }
     50%{
-        transform:translateY(-8px);
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(0px);
     }
 }
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .story-box{
+        padding:30px;
+    }
+
+    .story{
+        font-size:1rem;
+    }
+
+}
+
 </style>
 </head>
+
 <body>
 
-<section class="hero party">
-    <h1>Clive & The Chaos Crew</h1>
-    <p>A dramatic comedy of wrestling, rivalries, hats, and Party Hips.</p>
-</section>
+<div class="glow"></div>
 
 <div class="container">
 
-    <div class="story">
+    <section class="hero party">
+        <h1>Clive & The Chaos Crew</h1>
         <p>
-            <span class="highlight">Clive</span>, a 23-year-old wrestler standing proudly at 6'2,
-            was known throughout town for two things:
-            his unbelievable athletic skill and his inability to decide who he truly loved.
+            Wrestling. Rivalries. Hats. Party Hips.
+            A completely unhinged romance adventure.
         </p>
+    </section>
 
-        <br>
+    <section class="story-box">
 
-        <p>
-            Around him gathered the strangest friend group imaginable.
-            <span class="highlight">Peter</span>, the intense hardworking gym fanatic;
-            <span class="highlight">Russel</span>, the music-loving twink;
-            shy little <span class="highlight">Chris</span>,
-            who constantly argued with everyone;
-            <span class="highlight">Tucker</span>,
-            legendary Roblox anime-game grinder;
-            mysterious stalker-like biker watcher
-            <span class="highlight">Hamster Hemmit</span>;
-            and chaotic gremlin <span class="highlight">James</span>.
-        </p>
+        <h2>The Story</h2>
 
-        <br>
+        <div class="story">
 
-        <p>
-            But above all stood Clive’s greatest enemy:
-            <span class="highlight">Hans Vermhat</span>,
-            the towering German hat salesman.
-            Hans traveled the city selling dramatic luxury hats
-            while plotting to ruin Clive’s wrestling reputation forever.
-        </p>
+            <p>
+                <span class="highlight">Clive</span>,
+                a 23-year-old wrestler standing proudly at 6'2,
+                was famous throughout the city for his athletic talent,
+                chaotic confidence,
+                and his dramatic Fortnite Party Hips dance entrances.
+            </p>
 
-        <br>
+            <br>
 
-        <p>
-            Every day became more chaotic.
-            Chris hated Alex.
-            Alex hated Chris.
-            Peter secretly loved Clive but could never express it.
-            Russel kept writing emotional songs about everyone.
-            Tucker kept forcing the group to play strange Roblox games at 3 AM.
-        </p>
+            <p>
+                Yet beneath the confidence,
+                Clive struggled with one impossible problem:
+                he had too many confusing feelings for too many people.
+            </p>
 
-        <br>
+            <br>
 
-        <p>
-            Meanwhile Clive continued performing Party Hips
-            during wrestling entrances,
-            confusing both fans and opponents alike.
-        </p>
+            <p>
+                His friend group was complete chaos.
+                <span class="highlight">Peter</span>,
+                the intense 5'1 hardworking gym chad,
+                secretly cared deeply for Clive but could barely express emotion.
+                <span class="highlight">Russel</span>
+                constantly made emotional playlists and dramatic music edits.
+                <span class="highlight">Chris</span>,
+                a shy 4'9 rival,
+                desperately wanted Clive’s attention while constantly fighting with
+                <span class="highlight">Alex</span>.
+            </p>
 
-        <br>
+            <br>
 
-        <p>
-            Eventually, after countless arguments,
-            wrestling matches,
-            dramatic rain scenes,
-            and one catastrophic hat-related incident involving Hans,
-            Clive finally realized who truly cared about him.
-        </p>
+            <p>
+                Alex, standing at 5'6,
+                loved swimming more than anything.
+                He constantly invited Clive to pools and beaches,
+                mostly because he enjoyed watching Clive perform Party Hips
+                in ridiculous swim outfits.
+                Chris considered Alex his greatest romantic rival,
+                and the two argued almost daily.
+            </p>
 
-        <br>
+            <br>
 
-        <p>
-            In the end,
-            Clive chose love,
-            his friends found peace,
-            and Hans accidentally became famous online
-            after slipping during Party Hips while wearing a giant velvet hat.
-        </p>
+            <p>
+                Meanwhile,
+                <span class="highlight">Holden</span>
+                was the calm one of the group.
+                Cool-headed and stylish,
+                Holden often acted as the voice of reason
+                whenever the others became completely insane.
+                Unfortunately,
+                Chris disliked Holden because of the strange people Holden associated with,
+                especially Hans Vermhat.
+            </p>
 
-        <br>
+            <br>
 
-        <p>
-            And somehow,
-            against all odds,
-            the Chaos Crew lived happily ever after.
-        </p>
+            <p>
+                Then there was
+                <span class="highlight">Tucker</span>,
+                legendary Roblox anime-game player and professional online debater.
+                <span class="highlight">Hamster Hemmit</span>,
+                the mysterious bike-watching stalker,
+                and <span class="highlight">James</span>,
+                the chaotic gremlin nobody trusted around computers.
+            </p>
+
+            <br>
+
+            <p>
+                Above them all stood Clive’s greatest enemy:
+                <span class="highlight">Hans Vermhat</span>,
+                the massive German hat salesman.
+                Hans sold luxury hats across the city
+                while plotting to destroy Clive’s wrestling reputation forever.
+            </p>
+
+            <br>
+
+            <p>
+                One evening everything exploded into chaos
+                during the annual Wrestling Festival.
+                Chris and Alex began screaming at each other beside the pool,
+                Tucker lost a Roblox tournament,
+                Hans attempted to sell giant velvet hats to random wrestlers,
+                and Clive accidentally performed Party Hips
+                in front of thousands of people.
+            </p>
+
+            <br>
+
+            <p>
+                Somehow,
+                through all the chaos,
+                Clive finally realized who truly cared for him.
+                After late-night talks,
+                emotional arguments,
+                and one catastrophic hat accident involving Hans,
+                Clive made his choice.
+            </p>
+
+            <br>
+
+            <p>
+                In the end,
+                the group slowly stopped fighting,
+                Hans accidentally became internet famous,
+                Russel wrote a song about the entire disaster,
+                and Clive finally found happiness with the one person
+                who understood him best.
+            </p>
+
+            <br>
+
+            <p>
+                And thus,
+                the Chaos Crew lived happily ever after.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="grid">
+
+        <div class="card">
+            <h3>Clive</h3>
+            <p>
+                6'2 wrestler and Party Hips master trying to survive emotional chaos.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Peter</h3>
+            <p>
+                Tiny gym chad with massive emotional problems.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Russel</h3>
+            <p>
+                Twink musician making dramatic playlists for every situation.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Chris</h3>
+            <p>
+                Shy rival constantly fighting Alex for Clive’s attention.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Alex</h3>
+            <p>
+                Swimming enthusiast obsessed with Clive’s Party Hips performances.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Holden</h3>
+            <p>
+                Calm and stylish mediator trapped inside a disaster friend group.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Tucker</h3>
+            <p>
+                Roblox anime-game grinder and online chaos specialist.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Hamster Hemmit</h3>
+            <p>
+                Strange bike-watching stalker lurking in the shadows.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>James</h3>
+            <p>
+                Chaotic goblin energy nobody fully understands.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Hans Vermhat</h3>
+            <p>
+                German luxury hat salesman and Clive’s dramatic nemesis.
+            </p>
+        </div>
+
+    </section>
+
+    <div class="footer">
+        ⚡ The Party Hips Cinematic Universe ⚡
     </div>
 
-    <div class="grid">
-
-        <div class="card">
-            <h2>Clive</h2>
-            <p>6'2 wrestler. Loves Party Hips and causes chaos everywhere.</p>
-        </div>
-
-        <div class="card">
-            <h2>Peter</h2>
-            <p>5'1 hardworking gym chad with emotional communication problems.</p>
-        </div>
-
-        <div class="card">
-            <h2>Russel</h2>
-            <p>Music-loving twink constantly creating dramatic playlists.</p>
-        </div>
-
-        <div class="card">
-            <h2>Chris</h2>
-            <p>4'9 shy rival obsessed with proving himself.</p>
-        </div>
-
-        <div class="card">
-            <h2>Tucker</h2>
-            <p>Roblox anime-game warrior with suspiciously perfect spelling.</p>
-        </div>
-
-        <div class="card">
-            <h2>Hamster Hemmit</h2>
-            <p>Mysterious bike watcher lurking in the distance.</p>
-        </div>
-
-        <div class="card">
-            <h2>James</h2>
-            <p>Chaotic goblin energy incarnate.</p>
-        </div>
-
-        <div class="card">
-            <h2>Hans Vermhat</h2>
-            <p>German hat merchant and Clive’s dramatic nemesis.</p>
-        </div>
-
-    </div>
-
-</div>
-
-<div class="footer">
-    ⚡ Party Hips Cinematic Universe ⚡
 </div>
 
 </body>
