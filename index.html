@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -125,15 +126,24 @@ body{
     color:#facc15;
 }
 
-/* image */
+/* images */
 .footer-img{
-    text-align:center;
     margin-top:60px;
 }
 
-.footer-img img{
+.side-images{
     width:90%;
-    max-width:900px;
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+
+.side-photo{
+    width:48%;
+    max-width:650px;
     border-radius:20px;
 }
 
@@ -142,6 +152,18 @@ body{
     text-align:center;
     color:#6b7280;
     margin:40px 0;
+}
+
+@media(max-width:900px){
+
+    .side-images{
+        flex-direction:column;
+    }
+
+    .side-photo{
+        width:100%;
+    }
+
 }
 
 </style>
@@ -176,7 +198,7 @@ Tucker, Hamster Hemmit, James, and Hans Vermhit each add strange layers to Clive
 
 </div>
 
-<!-- FULL STORY (YOUR EXACT TEXT) -->
+<!-- FULL STORY -->
 <div class="story-box" id="storyBox">
 
 <div class="story-title">THE FULL STORY</div>
@@ -287,19 +309,45 @@ And life, in all its chaos, continued forward.
 
 </div>
 
+<!-- SIDE IMAGES -->
 <div class="footer-img">
-<img src="https://cdn.discordapp.com/attachments/1070148505122902137/1503184095138549861/clive_for_website.png?ex=6a026cc8&is=6a011b48&hm=cde9cc36bb8bd6e5157011d1a7e6755098a1ba6deb0d8c9c5dd1800eb33d3a86&">
+
+    <div class="side-images">
+
+        <!-- LEFT IMAGE -->
+        <img 
+        class="side-photo"
+        src="https://cdn.discordapp.com/attachments/1070148505122902137/1503184095138549861/clive_for_website.png?ex=6a026cc8&is=6a011b48&hm=cde9cc36bb8bd6e5157011d1a7e6755098a1ba6deb0d8c9c5dd1800eb33d3a86&">
+
+        <!-- RIGHT IMAGE -->
+        <img 
+        class="side-photo"
+        src="https://cdn.discordapp.com/attachments/812702385284972594/1503187822457393314/Screenshot_20230606_170958_Snapchat.jpg?ex=6a027040&is=6a011ec0&hm=f27d5c97952c104fcd8ca1533aa56ec8ce19acb3c9dda1ef09433fb857a76c44&">
+
+    </div>
+
 </div>
 
 <div class="footer">
 ⚡ Chaos Crew Universe ⚡
 </div>
 
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic" autoplay loop>
+    <source src="New_Project (4).mp3" type="audio/mpeg">
+</audio>
+
 <script>
+
 function showStory(){
     document.getElementById("storyBox").style.display = "block";
 }
+
+const music = document.getElementById("bgMusic");
+music.volume = 0.08;
+
 </script>
 
 </body>
 </html>
+```
